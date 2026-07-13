@@ -1,60 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  max-width: 700px;
-  margin: 60px auto;
-  padding: 0 20px;
-  background-color: #f4f1ea;
-  color: #2b2b2b;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #F7F5F0;
+  color: #1A1A18;
   line-height: 1.6;
 }
 
-h1 {
-  font-size: 2.2rem;
-  color: #1a1a1a;
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: #6b6862;
 }
 
-p {
-  font-size: 1.1rem;
+/* --- MASTHEAD --- */
+.masthead {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 30px;
+  border-bottom: 1px solid #D8D4C8;
 }
 
-a {
-  color: #d97757;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* --- HERO --- */
-.hero {
-  text-align: center;
-  padding: 100px 20px 60px;
-}
-
-.hero-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #d97757;
+.masthead-top {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 24px;
-  opacity: 0;
-  animation: aparecer 1s ease forwards;
 }
 
-.hero-sub {
-  color: #6b6b6b;
-  font-size: 1.15rem;
+.masthead h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(3rem, 8vw, 6rem);
+  margin: 0;
+  line-height: 0.95;
 }
 
-@keyframes aparecer {
-  from { opacity: 0; transform: translateY(-10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* --- ANIMACIÓN DE LETRAS (las genera el JS, aquí solo el estilo) --- */
 .animar-letras span {
   display: inline-block;
   opacity: 0;
@@ -66,14 +50,124 @@ a:hover {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- REVEAL AL HACER SCROLL --- */
+.masthead-sub {
+  font-size: 1rem;
+  color: #6b6862;
+  margin-top: 16px;
+}
+
+/* --- ÍNDICE / FILTRO --- */
+.index-nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid #D8D4C8;
+}
+
+.index-item {
+  font-family: 'Inter', sans-serif;
+  background: none;
+  border: 1px solid #D8D4C8;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #1A1A18;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.index-item .mono {
+  color: inherit;
+}
+
+.index-item:hover {
+  border-color: #8C2F2F;
+}
+
+.index-item.active {
+  background-color: #1A1A18;
+  color: #F7F5F0;
+  border-color: #1A1A18;
+}
+
+.index-item.active .mono {
+  color: #8C2F2F;
+}
+
+/* --- GRID DE TRABAJOS --- */
+.grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.pieza {
+  border-top: 1px solid #D8D4C8;
+  padding-top: 16px;
+}
+
+.pieza-visual {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-color: #E8E4D8;
+  margin-bottom: 16px;
+}
+
+.pieza-info h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin: 8px 0 4px;
+}
+
+.pieza-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #8C2F2F;
+}
+
+.pieza.oculto {
+  display: none;
+}
+
+/* --- SECCIONES INFERIORES --- */
+.sobre-mi, .contacto {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  border-top: 1px solid #D8D4C8;
+}
+
+.sobre-mi p {
+  font-size: 1.1rem;
+  margin-top: 12px;
+}
+
+.contacto a {
+  display: block;
+  margin-top: 12px;
+  color: #8C2F2F;
+  text-decoration: none;
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+}
+
+.contacto a:hover {
+  text-decoration: underline;
+}
+
+/* --- REVEAL AL SCROLL --- */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
-  margin: 80px auto;
-  max-width: 700px;
-  padding: 0 20px;
 }
 
 .reveal.visible {
@@ -81,7 +175,6 @@ a:hover {
   transform: translateY(0);
 }
 
-/* --- SCROLL SUAVE --- */
 html {
   scroll-behavior: smooth;
 }

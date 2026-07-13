@@ -22,3 +22,22 @@ const observer = new IntersectionObserver((entradas) => {
 }, { threshold: 0.15 });
 
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+// --- 3. Filtro de categorías ---
+const botones = document.querySelectorAll('.index-item');
+const piezas = document.querySelectorAll('.pieza');
+
+botones.forEach((boton) => {
+  boton.addEventListener('click', () => {
+    // Quita "active" de todos, se lo pone al clicado
+    botones.forEach((b) => b.classList.remove('active'));
+    boton.classList.add('active');
+
+    const filtro = boton.dataset.filter;
+
+    piezas.forEach((pieza) => {
+      const coincide = filtro === 'todo' || pieza.dataset.cat === filtro;
+      pieza.classList.toggle('oculto', !coincide);
+    });
+  });
+});
