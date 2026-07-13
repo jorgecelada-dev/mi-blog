@@ -5,15 +5,34 @@
   <title>Mi Blog Personal</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
-<h2>Entradas</h2>
-<ul>
-  <li><a href="posts/primera-entrada.html">Mi primera entrada</a></li>
-</ul>
 <body>
 
-  <h1>Hola, soy Jorge Celada</h1>
-  <p>Estoy aprendiendo desarrollo web y este es mi primer blog personal. Pronto empiezo DAW.</p>
-  <a href="mailto:tuemail@ejemplo.com">Escríbeme</a>
+  <header class="hero">
+    <img src="img/perfil.jpg" alt="Foto de perfil" class="hero-img">
+    <h1 class="animar-letras">Hola, soy Jorge</h1>
+    <p class="hero-sub">Aprendiendo desarrollo web, un commit a la vez.</p>
+  </header>
 
+  <main>
+    <section class="reveal">
+      <h2>Sobre mí</h2>
+      <p>Estoy empezando DAW y documentando el proceso aquí, desde cero, sin filtros.</p>
+    </section>
+
+    <section class="reveal">
+      <h2>Entradas</h2>
+      <ul>
+        <!-- POSTS -->
+        <li><a href="posts/primera-entrada.html">Mi primera entrada</a></li>
+      </ul>
+    </section>
+
+    <section class="reveal">
+      <h2>Contacto</h2>
+      <a href="mailto:tuemail@ejemplo.com">Escríbeme</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -26,3 +26,62 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* --- HERO --- */
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+}
+
+.hero-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d97757;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: aparecer 1s ease forwards;
+}
+
+.hero-sub {
+  color: #6b6b6b;
+  font-size: 1.15rem;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- ANIMACIÓN DE LETRAS (las genera el JS, aquí solo el estilo) --- */
+.animar-letras span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: letra-aparece 0.5s ease forwards;
+}
+
+@keyframes letra-aparece {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- REVEAL AL HACER SCROLL --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  margin: 80px auto;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- SCROLL SUAVE --- */
+html {
+  scroll-behavior: smooth;
+}
