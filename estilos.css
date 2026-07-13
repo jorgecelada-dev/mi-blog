@@ -178,3 +178,81 @@ body {
 html {
   scroll-behavior: smooth;
 }
+/* --- TOPBAR --- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #1A1A18;
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #F7F5F0;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.topbar-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar-links a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #F7F5F0;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.topbar-links a:hover,
+.topbar-links a.active {
+  color: #C97B5F;
+}
+
+.topbar-burger {
+  display: none;
+  background: none;
+  border: none;
+  color: #F7F5F0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive: menú hamburguesa en móvil */
+@media (max-width: 720px) {
+  .topbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1A1A18;
+    flex-direction: column;
+    padding: 20px 24px;
+    gap: 18px;
+  }
+
+  .topbar-links.abierto {
+    display: flex;
+  }
+
+  .topbar-burger {
+    display: block;
+  }
+}

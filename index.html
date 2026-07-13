@@ -3,11 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Jorge Celada — Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+
+  <div class="topbar-inner">
+    <a href="#top" class="topbar-logo">JC</a>
+    <ul class="topbar-links" id="topbar-links">
+      <li><a href="#sobre-mi">Perfil</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#grid" data-filter="arte">Arte</a></li>
+      <li><a href="#grid" data-filter="uxui">UI/UX</a></li>
+      <li><a href="#grid" data-filter="animacion">Animations</a></li>
+      <li><a href="#grid" data-filter="productos">Products</a></li>
+      <li><a href="#grid" data-filter="marca">Brand Design</a></li>
+    </ul>
+    <button class="topbar-burger" id="topbar-burger" aria-label="Abrir menú">☰</button>
+  </div>
+</nav>
 
   <header class="masthead">
     <div class="masthead-top">
@@ -17,27 +32,6 @@
     <h1 class="animar-letras">Jorge Celada</h1>
     <p class="masthead-sub">Arte · Diseño · UX/UI · Identidad de marca · Animación</p>
   </header>
-
-  <nav class="index-nav">
-    <button class="index-item active" data-filter="todo">
-      <span class="mono">00</span> Todo
-    </button>
-    <button class="index-item" data-filter="arte">
-      <span class="mono">01</span> Arte
-    </button>
-    <button class="index-item" data-filter="uxui">
-      <span class="mono">02</span> UX/UI
-    </button>
-    <button class="index-item" data-filter="marca">
-      <span class="mono">03</span> Identidad de marca
-    </button>
-    <button class="index-item" data-filter="animacion">
-      <span class="mono">04</span> Animación
-    </button>
-    <button class="index-item" data-filter="anuncios">
-      <span class="mono">05</span> Anuncios
-    </button>
-  </nav>
 
   <main class="grid" id="grid">
     <article class="pieza reveal" data-cat="arte">
@@ -91,7 +85,7 @@
     <p>Estoy empezando DAW y construyendo este portfolio como proceso en vivo — cada pieza documenta algo nuevo que aprendo, sea diseño, código o ambos a la vez.</p>
   </section>
 
-  <footer class="contacto reveal">
+ <footer class="contacto reveal" id="contacto"></footer>
     <span class="mono">Contacto</span>
     <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a>
   </footer>

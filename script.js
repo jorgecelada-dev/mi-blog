@@ -41,3 +41,22 @@ botones.forEach((boton) => {
     });
   });
 });
+// --- 4. Menú hamburguesa (móvil) ---
+const burger = document.getElementById('topbar-burger');
+const links = document.getElementById('topbar-links');
+
+burger.addEventListener('click', () => {
+  links.classList.toggle('abierto');
+});
+
+// --- 5. Filtro desde la topbar ---
+document.querySelectorAll('.topbar-links a[data-filter]').forEach((link) => {
+  link.addEventListener('click', () => {
+    const filtro = link.dataset.filter;
+    document.querySelectorAll('.pieza').forEach((pieza) => {
+      const coincide = pieza.dataset.cat === filtro;
+      pieza.classList.toggle('oculto', !coincide);
+    });
+    links.classList.remove('abierto'); // cierra menú móvil al elegir
+  });
+});
