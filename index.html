@@ -2,27 +2,29 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jorge Celada — Portfolio</title>
- <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
+<body id="top">
 
-  <div class="topbar-inner">
-    <a href="#top" class="topbar-logo">JC</a>
-    <ul class="topbar-links" id="topbar-links">
-      <li><a href="#sobre-mi">Perfil</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-      <li><a href="#grid" data-filter="arte">Arte</a></li>
-      <li><a href="#grid" data-filter="uxui">UI/UX</a></li>
-      <li><a href="#grid" data-filter="animacion">Animations</a></li>
-      <li><a href="#grid" data-filter="productos">Products</a></li>
-      <li><a href="#grid" data-filter="marca">Brand Design</a></li>
-    </ul>
-    <button class="topbar-burger" id="topbar-burger" aria-label="Abrir menú">☰</button>
-  </div>
-</nav>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="#top" class="topbar-logo">JC</a>
+      <ul class="topbar-links" id="topbar-links">
+        <li><a href="#sobre-mi">Perfil</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#grid" data-filter="arte">Arte</a></li>
+        <li><a href="#grid" data-filter="uxui">UI/UX</a></li>
+        <li><a href="#grid" data-filter="animacion">Animations</a></li>
+        <li><a href="#grid" data-filter="productos">Products</a></li>
+        <li><a href="#grid" data-filter="marca">Brand Design</a></li>
+      </ul>
+      <button class="topbar-burger" id="topbar-burger" aria-label="Abrir menú">☰</button>
+    </div>
+  </nav>
 
   <header class="masthead">
     <div class="masthead-top">
@@ -48,7 +50,7 @@
       <div class="pieza-info">
         <span class="mono">02</span>
         <h3>Título del proyecto</h3>
-        <span class="pieza-tag">UX/UI</span>
+        <span class="pieza-tag">UI/UX</span>
       </div>
     </article>
 
@@ -57,7 +59,7 @@
       <div class="pieza-info">
         <span class="mono">03</span>
         <h3>Título del proyecto</h3>
-        <span class="pieza-tag">Identidad de marca</span>
+        <span class="pieza-tag">Brand Design</span>
       </div>
     </article>
 
@@ -66,26 +68,26 @@
       <div class="pieza-info">
         <span class="mono">04</span>
         <h3>Título del proyecto</h3>
-        <span class="pieza-tag">Animación</span>
+        <span class="pieza-tag">Animations</span>
       </div>
     </article>
 
-    <article class="pieza reveal" data-cat="anuncios">
+    <article class="pieza reveal" data-cat="productos">
       <div class="pieza-visual"></div>
       <div class="pieza-info">
         <span class="mono">05</span>
         <h3>Título del proyecto</h3>
-        <span class="pieza-tag">Anuncios</span>
+        <span class="pieza-tag">Products</span>
       </div>
     </article>
   </main>
 
-  <section class="sobre-mi reveal">
+  <section class="sobre-mi reveal" id="sobre-mi">
     <span class="mono">Sobre mí</span>
     <p>Estoy empezando DAW y construyendo este portfolio como proceso en vivo — cada pieza documenta algo nuevo que aprendo, sea diseño, código o ambos a la vez.</p>
   </section>
 
- <footer class="contacto reveal" id="contacto"></footer>
+  <footer class="contacto reveal" id="contacto">
     <span class="mono">Contacto</span>
     <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a>
   </footer>

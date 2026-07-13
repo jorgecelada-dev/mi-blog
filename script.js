@@ -23,33 +23,17 @@ const observer = new IntersectionObserver((entradas) => {
 
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-// --- 3. Filtro de categorías ---
-const botones = document.querySelectorAll('.index-item');
-const piezas = document.querySelectorAll('.pieza');
-
-botones.forEach((boton) => {
-  boton.addEventListener('click', () => {
-    // Quita "active" de todos, se lo pone al clicado
-    botones.forEach((b) => b.classList.remove('active'));
-    boton.classList.add('active');
-
-    const filtro = boton.dataset.filter;
-
-    piezas.forEach((pieza) => {
-      const coincide = filtro === 'todo' || pieza.dataset.cat === filtro;
-      pieza.classList.toggle('oculto', !coincide);
-    });
-  });
-});
-// --- 4. Menú hamburguesa (móvil) ---
+// --- 3. Menú hamburguesa (móvil) ---
 const burger = document.getElementById('topbar-burger');
 const links = document.getElementById('topbar-links');
 
-burger.addEventListener('click', () => {
-  links.classList.toggle('abierto');
-});
+if (burger && links) {
+  burger.addEventListener('click', () => {
+    links.classList.toggle('abierto');
+  });
+}
 
-// --- 5. Filtro desde la topbar ---
+// --- 4. Filtro desde la topbar ---
 document.querySelectorAll('.topbar-links a[data-filter]').forEach((link) => {
   link.addEventListener('click', () => {
     const filtro = link.dataset.filter;
@@ -57,6 +41,6 @@ document.querySelectorAll('.topbar-links a[data-filter]').forEach((link) => {
       const coincide = pieza.dataset.cat === filtro;
       pieza.classList.toggle('oculto', !coincide);
     });
-    links.classList.remove('abierto'); // cierra menú móvil al elegir
+    if (links) links.classList.remove('abierto');
   });
 });

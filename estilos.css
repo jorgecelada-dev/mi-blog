@@ -17,11 +17,88 @@ body {
   color: #6b6862;
 }
 
+/* --- TOPBAR --- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #1A1A18;
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #F7F5F0;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.topbar-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar-links a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #F7F5F0;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.topbar-links a:hover {
+  color: #C97B5F;
+}
+
+.topbar-burger {
+  display: none;
+  background: none;
+  border: none;
+  color: #F7F5F0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .topbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1A1A18;
+    flex-direction: column;
+    padding: 20px 24px;
+    gap: 18px;
+  }
+
+  .topbar-links.abierto {
+    display: flex;
+  }
+
+  .topbar-burger {
+    display: block;
+  }
+}
+
 /* --- MASTHEAD --- */
 .masthead {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 24px 30px;
+  padding: 60px 24px 30px;
   border-bottom: 1px solid #D8D4C8;
 }
 
@@ -54,48 +131,6 @@ body {
   font-size: 1rem;
   color: #6b6862;
   margin-top: 16px;
-}
-
-/* --- ÍNDICE / FILTRO --- */
-.index-nav {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px 24px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  border-bottom: 1px solid #D8D4C8;
-}
-
-.index-item {
-  font-family: 'Inter', sans-serif;
-  background: none;
-  border: 1px solid #D8D4C8;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  color: #1A1A18;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.index-item .mono {
-  color: inherit;
-}
-
-.index-item:hover {
-  border-color: #8C2F2F;
-}
-
-.index-item.active {
-  background-color: #1A1A18;
-  color: #F7F5F0;
-  border-color: #1A1A18;
-}
-
-.index-item.active .mono {
-  color: #8C2F2F;
 }
 
 /* --- GRID DE TRABAJOS --- */
@@ -177,82 +212,4 @@ body {
 
 html {
   scroll-behavior: smooth;
-}
-/* --- TOPBAR --- */
-.topbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: #1A1A18;
-}
-
-.topbar-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 18px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.topbar-logo {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: #F7F5F0;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
-.topbar-links {
-  list-style: none;
-  display: flex;
-  gap: 28px;
-  margin: 0;
-  padding: 0;
-}
-
-.topbar-links a {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: #F7F5F0;
-  text-decoration: none;
-  letter-spacing: 0.02em;
-}
-
-.topbar-links a:hover,
-.topbar-links a.active {
-  color: #C97B5F;
-}
-
-.topbar-burger {
-  display: none;
-  background: none;
-  border: none;
-  color: #F7F5F0;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Responsive: menú hamburguesa en móvil */
-@media (max-width: 720px) {
-  .topbar-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #1A1A18;
-    flex-direction: column;
-    padding: 20px 24px;
-    gap: 18px;
-  }
-
-  .topbar-links.abierto {
-    display: flex;
-  }
-
-  .topbar-burger {
-    display: block;
-  }
 }
