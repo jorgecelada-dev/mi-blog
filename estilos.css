@@ -249,12 +249,12 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
-  margin-bottom: 28px;
+  margin-bottom: 48px;
 }
 
 .videojuegos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
@@ -288,6 +288,16 @@ body {
   .videojuegos-hero {
     grid-template-columns: 1fr;
   }
+
+  .videojuegos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .videojuegos-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .pieza-info h3 {
@@ -308,7 +318,7 @@ body {
 }
 
 /* --- SECCIONES INFERIORES --- */
-.sobre-mi, .contacto {
+.sobre-mi {
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px 24px;
@@ -321,11 +331,27 @@ body {
   margin-top: 12px;
 }
 
+/* --- CONTACTO (franja oscura, a juego con la topbar) --- */
+.contacto {
+  background-color: #1A1A18;
+  padding: 56px 0 96px;
+}
+
+.contacto-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.contacto .mono {
+  color: #9c988f;
+}
+
 .contacto-inner {
   display: flex;
   align-items: center;
   gap: 32px;
-  margin-top: 12px;
+  margin-top: 20px;
 }
 
 .contacto-foto {
@@ -335,7 +361,7 @@ body {
   object-fit: cover;
   object-position: center;
   flex-shrink: 0;
-  border: 2px solid #D8D4C8;
+  border: 2px solid #3a3934;
 }
 
 .contacto-links {
@@ -345,7 +371,7 @@ body {
 .contacto a {
   display: block;
   margin-top: 8px;
-  color: #8C2F2F;
+  color: #C97B5F;
   text-decoration: none;
   font-family: 'Fraunces', serif;
   font-size: 1.5rem;
@@ -356,6 +382,7 @@ body {
 }
 
 .contacto a:hover {
+  color: #F7F5F0;
   text-decoration: underline;
 }
 
