@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jorge Celada — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,900;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css?v=15">
+  <script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 </head>
 <body id="top">
 
@@ -18,7 +19,6 @@
         <li><a href="#contacto">Contacto</a></li>
         <li><a href="#grid" data-filter="arte">Arte</a></li>
         <li><a href="#grid" data-filter="uxui">UI/UX</a></li>
-        <li><a href="#grid" data-filter="animacion">Animations</a></li>
         <li><a href="#grid" data-filter="productos">Products</a></li>
         <li><a href="#grid" data-filter="marca">Brand Design</a></li>
       </ul>
@@ -27,47 +27,60 @@
   </nav>
 
   <header class="masthead">
-    <h1 class="animar-letras">Jorge Celada</h1>
+    <h1 class="hero-nombre">
+      <span class="visually-hidden">Jorge Celada</span>
+      <span class="slice-nombre" aria-hidden="true">
+        <span class="slice-capa">Jorge Celada</span>
+        <span class="slice-capa">Jorge Celada</span>
+        <span class="slice-capa">Jorge Celada</span>
+        <span class="slice-capa">Jorge Celada</span>
+        <span class="slice-capa">Jorge Celada</span>
+      </span>
+    </h1>
     <p class="masthead-sub">Arte · Diseño · UX/UI · Identidad de marca · Animación</p>
   </header>
 
   <main class="grid" id="grid">
-    <article class="pieza reveal" data-cat="arte">
+    <article class="pieza reveal pieza--destacada" data-cat="arte">
       <a class="pieza-link" href="#gameplay">
         <div class="pieza-visual flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-screenshot-2024-11-07-214619.png" alt="Gameplay" loading="lazy">
+              <img src="img/jorge-celada-screenshot-2024-11-07-214619.png" alt="Mis propios productos" loading="lazy">
             </div>
             <div class="flip-card-back">
               <span class="mono">Arte</span>
-              <p>Capturas de gameplay del videojuego cartoon, mostrando el estilo visual en acción.</p>
+              <p>Proyectos propios: capturas de gameplay del videojuego cartoon, mostrando el estilo visual en acción.</p>
             </div>
           </div>
         </div>
         <div class="pieza-info">
           <span class="mono">01</span>
-          <h3>Gameplay</h3>
+          <h3>Mis propios productos</h3>
           <span class="pieza-tag">Arte</span>
         </div>
       </a>
     </article>
 
     <article class="pieza reveal" data-cat="uxui">
-      <div class="pieza-visual flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front"></div>
-          <div class="flip-card-back">
-            <span class="mono">UI/UX</span>
-            <p>Diseño de interfaz centrado en la claridad y el flujo de usuario, de wireframe a prototipo.</p>
+      <a class="pieza-link" href="#paginas-web">
+        <div class="pieza-visual flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-web-chronos-rewards.png" alt="Páginas web" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <span class="mono">UI/UX</span>
+              <p>Diseño de páginas web: rewards, game-pass y landing pages de producto.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="pieza-info">
-        <span class="mono">02</span>
-        <h3>Título del proyecto</h3>
-        <span class="pieza-tag">UI/UX</span>
-      </div>
+        <div class="pieza-info">
+          <span class="mono">02</span>
+          <h3>Páginas web</h3>
+          <span class="pieza-tag">UI/UX</span>
+        </div>
+      </a>
     </article>
 
     <article class="pieza reveal" data-cat="marca">
@@ -75,7 +88,7 @@
         <div class="pieza-visual flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-pitch-portada.png" alt="Pitch Creation for Brands" loading="lazy">
+              <img src="img/jorge-celada-pitch-portada.png" alt="Pitches &amp; Presentations" loading="lazy">
             </div>
             <div class="flip-card-back">
               <span class="mono">Brand Design</span>
@@ -85,30 +98,13 @@
         </div>
         <div class="pieza-info">
           <span class="mono">03</span>
-          <h3>Pitch Creation for Brands</h3>
+          <h3>Pitches &amp; Presentations</h3>
           <span class="pieza-tag">Brand Design</span>
         </div>
       </a>
     </article>
 
-    <article class="pieza reveal" data-cat="animacion">
-      <div class="pieza-visual flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front"></div>
-          <div class="flip-card-back">
-            <span class="mono">Animations</span>
-            <p>Animación 2D cuadro a cuadro explorando timing, peso y expresividad del movimiento.</p>
-          </div>
-        </div>
-      </div>
-      <div class="pieza-info">
-        <span class="mono">04</span>
-        <h3>Título del proyecto</h3>
-        <span class="pieza-tag">Animations</span>
-      </div>
-    </article>
-
-    <article class="pieza reveal" data-cat="productos">
+    <article class="pieza reveal pieza--destacada" data-cat="productos">
       <a class="pieza-link" href="#videojuegos">
         <div class="pieza-visual flip-card">
           <div class="flip-card-inner">
@@ -122,18 +118,82 @@
           </div>
         </div>
         <div class="pieza-info">
-          <span class="mono">05</span>
+          <span class="mono">04</span>
           <h3>UI/UX para videojuegos</h3>
           <span class="pieza-tag">Products</span>
         </div>
       </a>
     </article>
+
+    <article class="pieza reveal" data-cat="marca">
+      <a class="pieza-link" href="#marketing">
+        <div class="pieza-visual flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-marketing-banner-plantboy.png" alt="Videos y Marketing" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <span class="mono">Brand Design</span>
+              <p>Banners, roll-ups y piezas de marketing para el lanzamiento de producto.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pieza-info">
+          <span class="mono">05</span>
+          <h3>Videos y Marketing</h3>
+          <span class="pieza-tag">Brand Design</span>
+        </div>
+      </a>
+    </article>
+
+    <article class="pieza reveal" data-cat="arte">
+      <a class="pieza-link" href="#personajes">
+        <div class="pieza-visual flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-asset-fox-hero.png" alt="Personajes" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <span class="mono">Arte</span>
+              <p>Modelos 3D de personajes, con visor interactivo y rotación automática.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pieza-info">
+          <span class="mono">06</span>
+          <h3>Personajes</h3>
+          <span class="pieza-tag">Arte</span>
+        </div>
+      </a>
+    </article>
   </main>
+
+  <section class="videojuegos reveal" id="paginas-web">
+    <div class="videojuegos-header">
+      <span class="mono">UI/UX — 02</span>
+      <h2>Páginas web</h2>
+      <p>Diseño de páginas web de producto: rewards, game-pass y landing pages.</p>
+    </div>
+
+    <figure class="videojuegos-fig">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/jorge-celada-web-chronos-rewards.png" alt="Página de rewards y game-pass" loading="lazy">
+          </div>
+          <div class="flip-card-back">
+            <p>Landing page de recompensas y game-pass para ChronosWorlds.</p>
+          </div>
+        </div>
+      </div>
+      <figcaption class="mono">Rewards &amp; Game-Pass</figcaption>
+    </figure>
+  </section>
 
   <section class="videojuegos reveal" id="pitch">
     <div class="videojuegos-header">
       <span class="mono">Brand Design — 03</span>
-      <h2>Pitch Creation for Brands</h2>
+      <h2>Pitches &amp; Presentations</h2>
       <p>Diseño de pitch decks de marca para distintos clientes: portadas, historia, funcionalidades y métricas.</p>
     </div>
 
@@ -300,7 +360,7 @@
   <section class="videojuegos reveal" id="gameplay">
     <div class="videojuegos-header">
       <span class="mono">Arte — 01</span>
-      <h2>Gameplay</h2>
+      <h2>Mis propios productos</h2>
       <p>Capturas de gameplay del videojuego cartoon, mostrando el mundo y el estilo visual en acción.</p>
     </div>
 
@@ -362,7 +422,7 @@
 
   <section class="videojuegos reveal" id="videojuegos">
     <div class="videojuegos-header">
-      <span class="mono">Products — 05</span>
+      <span class="mono">Products — 04</span>
       <h2>UI/UX para videojuegos</h2>
       <p>Diseño de arte e interfaz para un videojuego cartoon: menús, sistemas de progresión, misiones, crafting y cocina.</p>
     </div>
@@ -517,7 +577,146 @@
     </div>
   </section>
 
-  <section class="sobre-mi reveal" id="sobre-mi">
+  <section class="videojuegos reveal" id="marketing">
+    <div class="videojuegos-header">
+      <span class="mono">Brand Design — 05</span>
+      <h2>Videos y Marketing</h2>
+      <p>Banners, roll-ups y piezas de marketing para el lanzamiento y promoción de producto.</p>
+    </div>
+
+    <div class="videojuegos-hero">
+      <figure class="videojuegos-fig videojuegos-fig--contain">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-marketing-banner-plantboy.png" alt="Banner — PlantBoy" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Banner vertical protagonizado por PlantBoy, con códigos QR de descarga.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Banner — PlantBoy</figcaption>
+      </figure>
+      <figure class="videojuegos-fig videojuegos-fig--contain">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-marketing-banner-fox.png" alt="Banner — Fox" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Banner vertical protagonizado por el personaje Fox, con enlaces de descarga.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Banner — Fox</figcaption>
+      </figure>
+    </div>
+    <div class="videojuegos-hero">
+      <figure class="videojuegos-fig videojuegos-fig--contain">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-marketing-banner-wide.jpg" alt="Banner ancho" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Banner horizontal para uso en web y redes sociales.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Banner ancho</figcaption>
+      </figure>
+      <figure class="videojuegos-fig videojuegos-fig--contain">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-marketing-rollup-plantboy.png" alt="Roll-up — PlantBoy" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Diseño de roll-up físico (85x200) para eventos y ferias.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Roll-up — PlantBoy</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="personajes reveal" id="personajes">
+    <div class="videojuegos-header">
+      <span class="mono">Arte — 06</span>
+      <h2>Personajes</h2>
+      <p>Modelos 3D de personajes navegables: arrastra para rotar la cámara o deja que gire solo.</p>
+    </div>
+
+    <div class="personajes-item">
+      <div class="personajes-modelo">
+        <model-viewer
+          src="models/jorge-celada-personaje-01.glb"
+          alt="Personaje 01 — modelo 3D"
+          auto-rotate
+          rotation-per-second="18deg"
+          camera-controls
+          touch-action="pan-y"
+          shadow-intensity="1"
+          exposure="1"
+          style="width: 100%; height: 100%;">
+        </model-viewer>
+      </div>
+      <div class="personajes-info">
+        <span class="mono">Personaje 01</span>
+        <h3>Personaje 01</h3>
+        <span class="pieza-tag">Arte</span>
+        <p>Modelo 3D de personaje, listo para producción.</p>
+      </div>
+    </div>
+
+    <div class="personajes-item personajes-item--invertido">
+      <div class="personajes-modelo">
+        <model-viewer
+          src="models/jorge-celada-personaje-02.glb"
+          alt="Personaje 02 — modelo 3D"
+          auto-rotate
+          rotation-per-second="18deg"
+          camera-controls
+          touch-action="pan-y"
+          shadow-intensity="1"
+          exposure="1"
+          style="width: 100%; height: 100%;">
+        </model-viewer>
+      </div>
+      <div class="personajes-info">
+        <span class="mono">Personaje 02</span>
+        <h3>Personaje 02</h3>
+        <span class="pieza-tag">Arte</span>
+        <p>Modelo 3D de personaje, listo para producción.</p>
+      </div>
+    </div>
+
+    <div class="personajes-item">
+      <div class="personajes-modelo">
+        <model-viewer
+          src="models/jorge-celada-personaje-03.glb"
+          alt="Personaje 03 — modelo 3D"
+          auto-rotate
+          rotation-per-second="18deg"
+          camera-controls
+          touch-action="pan-y"
+          shadow-intensity="1"
+          exposure="1"
+          style="width: 100%; height: 100%;">
+        </model-viewer>
+      </div>
+      <div class="personajes-info">
+        <span class="mono">Personaje 03</span>
+        <h3>Personaje 03</h3>
+        <span class="pieza-tag">Arte</span>
+        <p>Modelo 3D de personaje, listo para producción.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre-mi reveal seccion-oscura" id="sobre-mi">
     <span class="mono">Sobre mí</span>
     <p>Estoy empezando DAW y construyendo este portfolio como proceso en vivo — cada pieza documenta algo nuevo que aprendo, sea diseño, código o ambos a la vez.</p>
   </section>
