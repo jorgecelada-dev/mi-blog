@@ -400,69 +400,40 @@ body {
   border-top: 1px solid #D8D4C8;
 }
 
-.personajes-item {
+.personajes-grid {
   display: grid;
-  grid-template-columns: 40% 1fr;
-  gap: 48px;
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
-.personajes-item + .personajes-item {
-  margin-top: 56px;
+.personaje-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.personajes-item--invertido {
-  grid-template-columns: 1fr 40%;
+.personaje-card .mono {
+  text-align: center;
 }
 
-.personajes-item--invertido .personajes-modelo {
-  order: 2;
-}
-
-.personajes-item--invertido .personajes-info {
-  order: 1;
-}
-
-.personajes-modelo {
+.personaje-card-modelo {
   min-width: 0;
   aspect-ratio: 4 / 5;
-  background-color: #E8E4D8;
+  background-color: #1A1A18;
+  border: 1px solid #3a3934;
   border-radius: 8px;
   overflow: hidden;
 }
 
-.personajes-info .mono {
-  display: block;
-  margin-bottom: 8px;
-}
-
-.personajes-info h3 {
-  font-family: 'Fraunces', serif;
-  font-weight: 600;
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-  margin: 0 0 12px;
-  line-height: 1.1;
-}
-
-.personajes-info .pieza-tag {
-  display: inline-block;
-  margin-bottom: 12px;
-}
-
-.personajes-info p {
-  font-size: 1.05rem;
-  color: #3d3b36;
-  margin: 0;
-}
-
 @media (max-width: 720px) {
-  .personajes-item,
-  .personajes-item--invertido {
-    grid-template-columns: 1fr;
+  .personajes-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .personajes-modelo {
-    aspect-ratio: 4 / 3;
+@media (max-width: 480px) {
+  .personajes-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -577,7 +548,6 @@ html {
 }
 
 .seccion-oscura .videojuegos-header p,
-.seccion-oscura .personajes-info p,
 .seccion-oscura .sobre-mi p {
   color: #d8d4c8;
 }
