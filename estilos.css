@@ -466,10 +466,6 @@ body {
   aspect-ratio: 16 / 9;
 }
 
-.videojuegos-fig--elenco .flip-card {
-  aspect-ratio: 6 / 5;
-}
-
 .videojuegos-fig--contain .flip-card-front {
   background-color: #1A1A18;
 }
@@ -618,26 +614,113 @@ body {
   }
 }
 
-/* --- VIDEO (reutilizable en cualquier sección, clara u oscura) --- */
-.video-frame {
-  width: 100%;
-  min-width: 0;
-  aspect-ratio: 16 / 9;
-  background-color: #1A1A18;
-  border: 1px solid #D8D4C8;
-  border-radius: 8px;
+/* --- CTA FINAL (elenco + "Let's work together!") --- */
+.cta-final {
+  position: relative;
+  max-width: 1100px;
+  margin: 24px auto 0;
+  padding: 40px 24px;
+  border-top: 1px solid #3a3934;
   overflow: hidden;
 }
 
-.video-frame video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.cta-final-focos {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
-.seccion-oscura .video-frame {
-  border-color: #3a3934;
+.cta-final-foco {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.5;
+  animation: cta-foco-pulso 9s ease-in-out infinite;
+}
+
+.cta-final-foco--1 {
+  width: 380px;
+  height: 380px;
+  background: #ff9d5c;
+  top: -110px;
+  left: 2%;
+}
+
+.cta-final-foco--2 {
+  width: 340px;
+  height: 340px;
+  background: #5ce1ff;
+  top: -90px;
+  right: 5%;
+  animation-delay: 3s;
+}
+
+.cta-final-foco--3 {
+  width: 320px;
+  height: 320px;
+  background: #b06cff;
+  bottom: -130px;
+  left: 38%;
+  animation-delay: 6s;
+}
+
+@keyframes cta-foco-pulso {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.18); opacity: 0.65; }
+}
+
+.cta-final-link {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0 0;
+  text-decoration: none;
+}
+
+.cta-final-texto {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: clamp(2.6rem, 7.5vw, 5.5rem);
+  color: #F7F5F0;
+  line-height: 1;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.cta-final-imagen {
+  position: relative;
+  z-index: 1;
+  width: min(64%, 500px);
+  display: block;
+  margin-top: -40px;
+  filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.55));
+  transition: transform 0.4s ease;
+}
+
+.cta-final-link:hover .cta-final-imagen {
+  transform: scale(1.04) translateY(-4px);
+}
+
+.cta-final-link:hover .cta-final-texto {
+  color: #C97B5F;
+}
+
+@media (max-width: 720px) {
+  .cta-final-texto {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  .cta-final-imagen {
+    width: 78%;
+    margin-top: -12px;
+  }
 }
 
 /* --- SECCIONES INFERIORES --- */
@@ -731,11 +814,6 @@ html {
 }
 
 /* --- SECCIONES CLARAS / OSCURAS (alternancia editorial) --- */
-.seccion-clara {
-  background-color: #F7F5F0;
-  color: #1A1A18;
-}
-
 .seccion-oscura {
   background-color: #1A1A18;
   color: #F7F5F0;
