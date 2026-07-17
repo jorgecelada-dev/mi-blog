@@ -19,16 +19,10 @@ if (burger && links) {
   burger.addEventListener('click', () => {
     links.classList.toggle('abierto');
   });
-}
 
-// --- 3. Filtro desde la topbar ---
-document.querySelectorAll('.topbar-links a[data-filter]').forEach((link) => {
-  link.addEventListener('click', () => {
-    const filtro = link.dataset.filter;
-    document.querySelectorAll('.pieza').forEach((pieza) => {
-      const coincide = pieza.dataset.cat === filtro;
-      pieza.classList.toggle('oculto', !coincide);
+  links.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      links.classList.remove('abierto');
     });
-    if (links) links.classList.remove('abierto');
   });
-});
+}

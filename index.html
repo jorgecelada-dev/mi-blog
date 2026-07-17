@@ -6,7 +6,7 @@
   <title>Jorge Celada — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,900;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos.css?v=17">
+  <link rel="stylesheet" href="estilos.css?v=43">
   <script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 </head>
 <body id="top">
@@ -15,18 +15,27 @@
     <div class="topbar-inner">
       <a href="#top" class="topbar-logo">JC</a>
       <ul class="topbar-links" id="topbar-links">
+        <li><a href="#gameplay">Productos</a></li>
+        <li><a href="#paginas-web">Páginas web</a></li>
+        <li><a href="#pitch">Pitches</a></li>
+        <li><a href="#videojuegos">Videojuegos</a></li>
+        <li><a href="#marketing">Marketing</a></li>
+        <li><a href="#personajes">Personajes</a></li>
+        <li><a href="#arte">Arte</a></li>
+        <li><a href="#ai">AI</a></li>
         <li><a href="#sobre-mi">Perfil</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="#grid" data-filter="arte">Arte</a></li>
-        <li><a href="#grid" data-filter="uxui">UI/UX</a></li>
-        <li><a href="#grid" data-filter="productos">Products</a></li>
-        <li><a href="#grid" data-filter="marca">Brand Design</a></li>
       </ul>
-      <button class="topbar-burger" id="topbar-burger" aria-label="Abrir menú">☰</button>
+      <div class="topbar-derecha">
+        <a href="#contacto" class="topbar-contacto">Contacto</a>
+        <button class="topbar-burger" id="topbar-burger" aria-label="Abrir menú">☰</button>
+      </div>
     </div>
   </nav>
 
   <header class="masthead">
+    <div class="hero-franja">
+      <video src="videos/animated_bg.mp4" autoplay muted loop playsinline></video>
+    </div>
     <h1 class="hero-nombre">
       <span class="visually-hidden">Jorge Celada</span>
       <span class="slice-nombre" aria-hidden="true">
@@ -40,13 +49,23 @@
     <p class="masthead-sub">Arte · Diseño · UX/UI · Identidad de marca · Animación</p>
   </header>
 
-  <main class="grid" id="grid">
-    <article class="pieza reveal pieza--destacada" data-cat="arte">
+  <section class="intro reveal seccion-oscura" id="intro">
+    <div class="intro-foto">
+      <span class="mono">Foto</span>
+    </div>
+    <div class="intro-texto">
+      <span class="mono">Presentación</span>
+      <p>Soy Jorge Celada, artista y desarrollador en formación (DAW). Combino diseño visual, ilustración y código para dar vida a videojuegos, marcas e interfaces. Este portfolio es un proceso en vivo: cada pieza documenta algo que aprendo por el camino, tanto a nivel técnico como creativo.</p>
+    </div>
+  </section>
+
+  <main class="grid seccion-oscura" id="grid">
+    <article class="pieza reveal" data-cat="arte">
       <a class="pieza-link" href="#gameplay">
         <div class="pieza-visual flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-screenshot-2024-11-07-214619.png" alt="Mis propios productos" loading="lazy">
+              <img src="img/jorge-celada-screenshot-2024-11-07-214619.webp" alt="Productos publicados" loading="lazy">
             </div>
             <div class="flip-card-back">
               <span class="mono">Arte</span>
@@ -56,7 +75,7 @@
         </div>
         <div class="pieza-info">
           <span class="mono">01</span>
-          <h3>Mis propios productos</h3>
+          <h3>Productos publicados</h3>
           <span class="pieza-tag">Arte</span>
         </div>
       </a>
@@ -88,7 +107,7 @@
         <div class="pieza-visual flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-pitch-portada.png" alt="Pitches &amp; Presentations" loading="lazy">
+              <img src="img/jorge-celada-pitch-portada.webp" alt="Pitches &amp; Presentations" loading="lazy">
             </div>
             <div class="flip-card-back">
               <span class="mono">Brand Design</span>
@@ -104,12 +123,12 @@
       </a>
     </article>
 
-    <article class="pieza reveal pieza--destacada" data-cat="productos">
+    <article class="pieza reveal" data-cat="productos">
       <a class="pieza-link" href="#videojuegos">
         <div class="pieza-visual flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-robotbanner.png" alt="UI/UX para videojuegos" loading="lazy">
+              <img src="img/jorge-celada-robotbanner.webp" alt="UI/UX para videojuegos" loading="lazy">
             </div>
             <div class="flip-card-back">
               <span class="mono">Products</span>
@@ -130,7 +149,7 @@
         <div class="pieza-visual flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-marketing-banner-plantboy.png" alt="Videos y Marketing" loading="lazy">
+              <img src="img/jorge-celada-marketing-banner-plantboy.webp" alt="Videos y Marketing" loading="lazy">
             </div>
             <div class="flip-card-back">
               <span class="mono">Brand Design</span>
@@ -166,9 +185,51 @@
         </div>
       </a>
     </article>
+
+    <article class="pieza reveal" data-cat="arte">
+      <a class="pieza-link" href="#arte">
+        <div class="pieza-visual flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-arte-concept-environments.webp" alt="Arte" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <span class="mono">Arte</span>
+              <p>Ilustración y concept art: entornos, personajes y piezas visuales.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pieza-info">
+          <span class="mono">07</span>
+          <h3>Arte</h3>
+          <span class="pieza-tag">Arte</span>
+        </div>
+      </a>
+    </article>
+
+    <article class="pieza reveal" data-cat="productos">
+      <a class="pieza-link" href="#ai">
+        <div class="pieza-visual flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-ai-golem.webp" alt="AI" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <span class="mono">Products</span>
+              <p>Exploración de personajes y criaturas generadas con inteligencia artificial.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pieza-info">
+          <span class="mono">08</span>
+          <h3>AI</h3>
+          <span class="pieza-tag">Products</span>
+        </div>
+      </a>
+    </article>
   </main>
 
-  <section class="videojuegos reveal" id="paginas-web">
+  <section class="videojuegos reveal seccion-oscura" id="paginas-web">
     <div class="videojuegos-header">
       <span class="mono">UI/UX — 02</span>
       <h2>Páginas web</h2>
@@ -190,7 +251,7 @@
     </figure>
   </section>
 
-  <section class="videojuegos reveal" id="pitch">
+  <section class="videojuegos reveal seccion-oscura" id="pitch">
     <div class="videojuegos-header">
       <span class="mono">Brand Design — 03</span>
       <h2>Pitches &amp; Presentations</h2>
@@ -202,7 +263,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-pitch-portada.png" alt="Portada del pitch deck" loading="lazy">
+              <img src="img/jorge-celada-pitch-portada.webp" alt="Portada del pitch deck" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Portada del pitch deck para Caïman Agency, con fotografía aérea y tipografía editorial.</p>
@@ -215,7 +276,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-pitch-nuestra-historia.png" alt="Nuestra historia" loading="lazy">
+              <img src="img/jorge-celada-pitch-nuestra-historia.webp" alt="Nuestra historia" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Página de hitos y crecimiento de la agencia: comunidad, proyectos y facturación.</p>
@@ -228,7 +289,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-pitch-eventos.png" alt="Eventos" loading="lazy">
+              <img src="img/jorge-celada-pitch-eventos.webp" alt="Eventos" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Sección de eventos organizados por la agencia y su alcance.</p>
@@ -241,7 +302,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-pitch-casos-de-exito.png" alt="Casos de éxito" loading="lazy">
+              <img src="img/jorge-celada-pitch-casos-de-exito.webp" alt="Casos de éxito" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Casos de éxito con resultados y métricas reales de clientes.</p>
@@ -254,7 +315,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-pitch-produc-film.png" alt="Producción audiovisual" loading="lazy">
+              <img src="img/jorge-celada-pitch-produc-film.webp" alt="Producción audiovisual" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Página dedicada a producción audiovisual y contenido de marca.</p>
@@ -319,7 +380,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-pitch-chronos-solution.png" alt="ChronosWorlds — Solution" loading="lazy">
+              <img src="img/jorge-celada-pitch-chronos-solution.webp" alt="ChronosWorlds — Solution" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Presentación de ChronosWorlds, un RPG de acción mobile-first con estética inspirada en Mario.</p>
@@ -332,7 +393,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-pitch-chronos-features.png" alt="ChronosWorlds — Adventure Through Time" loading="lazy">
+              <img src="img/jorge-celada-pitch-chronos-features.webp" alt="ChronosWorlds — Adventure Through Time" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Funcionalidades clave: mundos, jefes, crafting, PvP y progresión del personaje.</p>
@@ -345,7 +406,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-pitch-chronos-about.png" alt="ChronosWorlds — About Us" loading="lazy">
+              <img src="img/jorge-celada-pitch-chronos-about.webp" alt="ChronosWorlds — About Us" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Equipo del estudio y respaldo de la industria: inversores y advisors del sector.</p>
@@ -357,19 +418,19 @@
     </div>
   </section>
 
-  <section class="videojuegos reveal" id="gameplay">
+  <section class="videojuegos reveal seccion-oscura" id="gameplay">
     <div class="videojuegos-header">
       <span class="mono">Arte — 01</span>
-      <h2>Mis propios productos</h2>
+      <h2>Productos publicados</h2>
       <p>Capturas de gameplay del videojuego cartoon, mostrando el mundo y el estilo visual en acción.</p>
     </div>
 
-    <div class="videojuegos-hero">
+    <div class="videojuegos-grid">
       <figure class="videojuegos-fig">
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-screenshot-2024-11-07-214619.png" alt="Captura de gameplay" loading="lazy">
+              <img src="img/jorge-celada-screenshot-2024-11-07-214619.webp" alt="Captura de gameplay" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Captura de una escena de gameplay mostrando el estilo artístico cartoon.</p>
@@ -395,7 +456,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/Screenshot 2025-08-03 150110.png" alt="Captura de gameplay" loading="lazy">
+              <img src="img/Screenshot 2025-08-03 150110.webp" alt="Captura de gameplay" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Captura de gameplay mostrando una escena adicional del mundo del juego.</p>
@@ -408,7 +469,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/Screenshot 2025-11-12 232439.png" alt="Captura de gameplay" loading="lazy">
+              <img src="img/Screenshot 2025-11-12 232439.webp" alt="Captura de gameplay" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Captura de gameplay más reciente, mostrando avances en el estilo visual.</p>
@@ -417,22 +478,48 @@
         </div>
         <figcaption class="mono">Captura de gameplay</figcaption>
       </figure>
+      <figure class="videojuegos-fig">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-gameplay-forest.webp" alt="Captura de gameplay" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Captura de gameplay explorando el bosque, con fauna y vegetación interactiva.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Captura de gameplay</figcaption>
+      </figure>
+      <figure class="videojuegos-fig">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-gameplay-triptico.png" alt="Captura de gameplay" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Tres escenarios del juego: forja de crafting, combate contra un jefe robot y cueva de cristal.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Captura de gameplay</figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="videojuegos reveal" id="videojuegos">
+  <section class="videojuegos reveal seccion-oscura" id="videojuegos">
     <div class="videojuegos-header">
       <span class="mono">Products — 04</span>
       <h2>UI/UX para videojuegos</h2>
       <p>Diseño de arte e interfaz para un videojuego cartoon: menús, sistemas de progresión, misiones, crafting y cocina.</p>
     </div>
 
-    <div class="videojuegos-hero">
+    <div class="videojuegos-grid">
       <figure class="videojuegos-fig">
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-fox-worms-banner.png" alt="Fox & Worms — banner" loading="lazy">
+              <img src="img/jorge-celada-fox-worms-banner.webp" alt="Fox & Worms — banner" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Banner promocional para "Fox &amp; Worms", con una paleta vibrante y personajes cartoon expresivos.</p>
@@ -445,7 +532,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-robotbanner.png" alt="Robot — banner" loading="lazy">
+              <img src="img/jorge-celada-robotbanner.webp" alt="Robot — banner" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Ilustración de banner protagonizada por el robot compañero del jugador.</p>
@@ -454,14 +541,11 @@
         </div>
         <figcaption class="mono">Robot — Banner</figcaption>
       </figure>
-    </div>
-
-    <div class="videojuegos-grid">
       <figure class="videojuegos-fig">
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-first-loading.jpg" alt="Pantalla de carga" loading="lazy">
+              <img src="img/jorge-celada-first-loading.webp" alt="Pantalla de carga" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Pantalla de carga inicial con animación de bienvenida y consejos de juego.</p>
@@ -474,7 +558,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-traveler-main-manu-acces.png" alt="Menú principal Traveler" loading="lazy">
+              <img src="img/jorge-celada-traveler-main-manu-acces.webp" alt="Menú principal Traveler" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Menú principal de acceso al modo Traveler, con navegación rápida a las secciones clave.</p>
@@ -487,7 +571,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-quests.jpg" alt="Sistema de misiones" loading="lazy">
+              <img src="img/jorge-celada-quests.webp" alt="Sistema de misiones" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Panel de misiones activas y completadas, con recompensas visibles de un vistazo.</p>
@@ -500,7 +584,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-crafting.jpg" alt="Sistema de crafting" loading="lazy">
+              <img src="img/jorge-celada-crafting.webp" alt="Sistema de crafting" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Interfaz de crafting para combinar materiales y desbloquear nuevos objetos.</p>
@@ -513,7 +597,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-cooking.jpg" alt="Sistema de cocina" loading="lazy">
+              <img src="img/jorge-celada-cooking.webp" alt="Sistema de cocina" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Minijuego de cocina con recetas que otorgan mejoras temporales al personaje.</p>
@@ -526,7 +610,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-achivements.jpg" alt="Logros" loading="lazy">
+              <img src="img/jorge-celada-achivements.webp" alt="Logros" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Galería de logros desbloqueables, con su progreso y descripción.</p>
@@ -539,7 +623,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-upgrade-menu-level-up.jpg" alt="Menú de mejora y subida de nivel" loading="lazy">
+              <img src="img/jorge-celada-upgrade-menu-level-up.webp" alt="Menú de mejora y subida de nivel" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Pantalla de subida de nivel con mejora de estadísticas del personaje.</p>
@@ -552,7 +636,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-x-level-selector.jpg" alt="Selector de niveles" loading="lazy">
+              <img src="img/jorge-celada-x-level-selector.webp" alt="Selector de niveles" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Mapa de selección de niveles con progresión visual por mundos.</p>
@@ -565,7 +649,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-item-1.jpg" alt="Diseño de ítem" loading="lazy">
+              <img src="img/jorge-celada-item-1.webp" alt="Diseño de ítem" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Diseño e iconografía de un ítem coleccionable del juego.</p>
@@ -577,43 +661,15 @@
     </div>
   </section>
 
-  <section class="videojuegos reveal" id="marketing">
+  <section class="videojuegos reveal seccion-oscura" id="marketing">
     <div class="videojuegos-header">
       <span class="mono">Brand Design — 05</span>
       <h2>Videos y Marketing</h2>
       <p>Banners, roll-ups y piezas de marketing para el lanzamiento y promoción de producto.</p>
     </div>
 
-    <div class="videojuegos-hero">
-      <figure class="videojuegos-fig videojuegos-fig--contain">
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="img/jorge-celada-marketing-banner-plantboy.png" alt="Banner — PlantBoy" loading="lazy">
-            </div>
-            <div class="flip-card-back">
-              <p>Banner vertical protagonizado por PlantBoy, con códigos QR de descarga.</p>
-            </div>
-          </div>
-        </div>
-        <figcaption class="mono">Banner — PlantBoy</figcaption>
-      </figure>
-      <figure class="videojuegos-fig videojuegos-fig--contain">
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="img/jorge-celada-marketing-banner-fox.png" alt="Banner — Fox" loading="lazy">
-            </div>
-            <div class="flip-card-back">
-              <p>Banner vertical protagonizado por el personaje Fox, con enlaces de descarga.</p>
-            </div>
-          </div>
-        </div>
-        <figcaption class="mono">Banner — Fox</figcaption>
-      </figure>
-    </div>
-    <div class="videojuegos-hero">
-      <figure class="videojuegos-fig videojuegos-fig--contain">
+    <div class="videojuegos-hero videojuegos-hero--simple">
+      <figure class="videojuegos-fig videojuegos-fig--ancho">
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -626,11 +682,40 @@
         </div>
         <figcaption class="mono">Banner ancho</figcaption>
       </figure>
-      <figure class="videojuegos-fig videojuegos-fig--contain">
+    </div>
+
+    <div class="videojuegos-grid">
+      <figure class="videojuegos-fig">
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/jorge-celada-marketing-rollup-plantboy.png" alt="Roll-up — PlantBoy" loading="lazy">
+              <img src="img/jorge-celada-marketing-banner-plantboy.webp" alt="Banner — PlantBoy" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Banner vertical protagonizado por PlantBoy, con códigos QR de descarga.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Banner — PlantBoy</figcaption>
+      </figure>
+      <figure class="videojuegos-fig">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-marketing-banner-fox.png" alt="Banner — Fox" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Banner vertical protagonizado por el personaje Fox, con enlaces de descarga.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Banner — Fox</figcaption>
+      </figure>
+      <figure class="videojuegos-fig">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-marketing-rollup-plantboy.webp" alt="Roll-up — PlantBoy" loading="lazy">
             </div>
             <div class="flip-card-back">
               <p>Diseño de roll-up físico (85x200) para eventos y ferias.</p>
@@ -668,20 +753,16 @@
       </div>
 
       <div class="personaje-card">
-        <div class="personaje-card-modelo">
-          <model-viewer
-            src="models/jorge-celada-personaje-02.glb"
-            alt="Personaje 02 — modelo 3D"
-            auto-rotate
-            rotation-per-second="18deg"
-            camera-controls
-            touch-action="pan-y"
-            shadow-intensity="1"
-            exposure="1"
-            style="width: 100%; height: 100%;">
-          </model-viewer>
+        <div class="personaje-proceso">
+          <img src="img/jorge-celada-personaje-01-rig.png" alt="Rig del Personaje 01" loading="lazy">
+          <img src="img/jorge-celada-personaje-01-wireframe.png" alt="Wireframe del Personaje 01" loading="lazy">
         </div>
-        <span class="mono">Personaje 02</span>
+        <span class="mono">Proceso — Personaje 01</span>
+        <p class="personaje-descripcion">Proceso de creación: rigging y topología del modelo, listo para animar.</p>
+        <div class="personaje-herramientas">
+          <span class="herramienta-tag">Blender</span>
+          <span class="herramienta-tag">Unity</span>
+        </div>
       </div>
 
       <div class="personaje-card">
@@ -702,18 +783,8 @@
       </div>
 
       <div class="personaje-card">
-        <div class="personaje-card-modelo">
-          <model-viewer
-            src="models/jorge-celada-personaje-04.glb"
-            alt="Personaje 04 — modelo 3D"
-            auto-rotate
-            rotation-per-second="18deg"
-            camera-controls
-            touch-action="pan-y"
-            shadow-intensity="1"
-            exposure="1"
-            style="width: 100%; height: 100%;">
-          </model-viewer>
+        <div class="personaje-card-modelo personaje-card-placeholder">
+          <p>Próximamente</p>
         </div>
         <span class="mono">Personaje 04</span>
       </div>
@@ -734,7 +805,160 @@
         </div>
         <span class="mono">Personaje 05</span>
       </div>
+
+      <div class="personaje-card">
+        <div class="personaje-card-modelo personaje-card-placeholder">
+          <p>Próximamente</p>
+        </div>
+        <span class="mono">Personaje 06</span>
+      </div>
     </div>
+  </section>
+
+  <section class="videojuegos reveal seccion-oscura" id="arte">
+    <div class="videojuegos-header">
+      <span class="mono">Arte — 07</span>
+      <h2>Arte</h2>
+      <p>Ilustración y concept art: entornos, personajes y piezas visuales.</p>
+    </div>
+
+    <div class="videojuegos-grid">
+      <figure class="videojuegos-fig videojuegos-fig--contain">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-arte-concept-environments.webp" alt="Concept art de entornos" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Concept art de tres entornos: bosque flotante, sendero encantado y ruinas industriales.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Concept art — Entornos</figcaption>
+      </figure>
+      <figure class="videojuegos-fig videojuegos-fig--contain">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-arte-plantboy.png" alt="PlantBoy" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Ilustración de personaje: PlantBoy, mascota secundaria de tipo naturaleza.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">PlantBoy</figcaption>
+      </figure>
+      <figure class="videojuegos-fig videojuegos-fig--contain">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-arte-fox-vs-wolf.png" alt="Fox vs Wolf" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Ilustración de enfrentamiento entre los personajes principales del juego.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Fox vs Wolf</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="videojuegos reveal seccion-oscura" id="ai">
+    <div class="videojuegos-header">
+      <span class="mono">Products — 08</span>
+      <h2>AI</h2>
+      <p>Exploración de personajes y criaturas generadas con inteligencia artificial.</p>
+    </div>
+
+    <div class="videojuegos-grid">
+      <figure class="videojuegos-fig videojuegos-fig--contain">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-ai-golem.webp" alt="Golem" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Criatura tipo golem de piedra y musgo, generada con IA.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Golem</figcaption>
+      </figure>
+      <figure class="videojuegos-fig videojuegos-fig--contain">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-ai-plant-spirit.png" alt="Espíritu de planta" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Espíritu vegetal generado con IA, con paleta natural y detalles luminosos.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Espíritu de planta</figcaption>
+      </figure>
+      <figure class="videojuegos-fig videojuegos-fig--contain">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-ai-goblin.png" alt="Goblin" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Criatura tipo goblin, generada con IA.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Goblin</figcaption>
+      </figure>
+      <figure class="videojuegos-fig videojuegos-fig--contain">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-ai-wolf-electric.png" alt="Lobo eléctrico" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Criatura tipo lobo con habilidad eléctrica, generada con IA.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Lobo eléctrico</figcaption>
+      </figure>
+      <figure class="videojuegos-fig videojuegos-fig--contain">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/jorge-celada-ai-dragon-ninja.png" alt="Dragón ninja" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+              <p>Criatura tipo dragón/lagarto ninja, generada con IA.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mono">Dragón ninja</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="videojuegos reveal seccion-oscura" id="elenco">
+    <div class="videojuegos-header">
+      <span class="mono">Arte</span>
+      <h2>El elenco</h2>
+      <p>Todos los personajes de ChronosWorlds, juntos.</p>
+    </div>
+    <figure class="videojuegos-fig videojuegos-fig--contain videojuegos-fig--elenco">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/jorge-celada-arte-grupo-completo.webp" alt="Elenco completo de personajes de ChronosWorlds" loading="lazy">
+          </div>
+          <div class="flip-card-back">
+            <p>Fox, Wolf, Golem, Goblin, el dragón ninja y PlantBoy — todo el elenco reunido.</p>
+          </div>
+        </div>
+      </div>
+    </figure>
   </section>
 
   <section class="sobre-mi reveal seccion-oscura" id="sobre-mi">
